@@ -4,9 +4,7 @@ import { applyCardStyles } from "components/ReusableStyles";
 
 
 function TopReleases() {
-  const music = [
-    
-  ];
+  
   return (
     <Section>
       <div className="title-container">
