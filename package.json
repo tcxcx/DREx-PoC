@@ -1,5 +1,5 @@
 {
-  "name": "music-dashboard2",
+  "name": "drex-dashboard2",
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
@@ -10,6 +10,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "recharts": "^2.1.8",
     "scrollreveal": "^4.0.9",

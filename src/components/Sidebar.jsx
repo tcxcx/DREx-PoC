@@ -5,8 +5,12 @@ import { FaSolarPanel } from "react-icons/fa";
 import { BiGroup, BiBell } from "react-icons/bi";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { AiFillThunderbolt } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { FiHelpCircle } from "react-icons/fi";
+
+
 function Sidebar() {
+  
   return (
     <Aside id="sidebar">
       <div className="brand">
@@ -14,23 +18,39 @@ function Sidebar() {
       </div>
       <ul className="links">
         <li className="selected">
-          <AiFillThunderbolt />
+          
+          <Link to="/"><AiFillThunderbolt /></Link>
+
         </li>
         <li>
-          <FaSolarPanel />
+          <Link to="/solar"><FaSolarPanel /></Link>
+
+        
         </li>
         <li>
-          <AiOutlineDollarCircle />
+          
+          <Link to="/earn"><AiOutlineDollarCircle /></Link>
+
+
         </li>
         <li>
-          <BiBell/>
+          
+          <Link to=""><BiBell/></Link>
+
+
         </li>
         <li>
-          <BiGroup />
+          
+          <Link to=""> <BiGroup /></Link>
+
+
+
         </li>
       </ul>
       <div className="help">
-        <FiHelpCircle />
+        <Link to=""><FiHelpCircle /> </Link>
+
+
       </div>
     </Aside>
   );

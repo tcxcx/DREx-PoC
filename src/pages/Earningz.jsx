@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import Earnings from "components/Earnings";
-import Navbar from "./Navbar";
-import Streams from "components/Streams";
-import TargetAudience from "./TargetAudience";
-import TopReleases from "./TopReleases";
+import TopReleases from "../components/TopReleases";
 import scrollreveal from "scrollreveal";
-function Dashboard() {
+function Earningz() {
   useEffect(() => {
     const sr = scrollreveal({
       origin: "bottom",
@@ -28,17 +25,11 @@ function Dashboard() {
   }, []);
   return (
     <Section>
-      <Navbar />
       <div className="grid">
-        <div className="row">
-          <Streams />
           <Earnings />
-        </div>
-        <div className="row2">
-          <TargetAudience />
           <TopReleases />
-        </div>
       </div>
+
     </Section>
   );
 }
@@ -50,10 +41,10 @@ const Section = styled.section`
 
   .grid {
     padding: 2rem;
-    padding-top: 0;
+    padding-top: 10;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem;
+    gap: 10rem;
     .row {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -80,4 +71,4 @@ const Section = styled.section`
   }
 `;
 
-export default Dashboard;
+export default Earningz;

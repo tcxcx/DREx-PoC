@@ -1,10 +1,16 @@
 import React, { useEffect } from "react";
 import Sidebar from "components/Sidebar";
 import RightSidebar from "components/RightSidebar";
-import Dashboard from "components/Dashboard";
+import Dashboard from "pages/Dashboard";
+import Solar from "pages/Solar";
+
 import styled from "styled-components";
 import scrollreveal from "scrollreveal";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Earningz from "pages/Earningz";
+
 export default function App() {
+  
   useEffect(() => {
     const sr = scrollreveal({
       origin: "left",
@@ -36,13 +42,25 @@ export default function App() {
     );
   }, []);
   return (
-    <Div>
-      <Sidebar />
-      <Dashboard />
-      <RightSidebar />
-    </Div>
+      <Div>
+      <Router>
+        <Sidebar />
+            <Routes>
+            {/*<Dashboard /> */}
+
+            <Route path="/" element={<Dashboard/>} />
+
+             {/*<Solar /> */}
+            <Route path="/solar" element={<Solar/>} />
+            <Route path="/earn" element={<Earningz/>} />
+            </Routes>
+        <RightSidebar />
+      </Router>
+      </Div>
+   
   );
 }
+
 
 const Div = styled.div`
   display: grid;
