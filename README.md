@@ -2,3 +2,6 @@ DREx is building a Proof of Concept (PoC) project to be presented at the Web3ath
 Install dependencies by:
 1. yarn
 2. yarn run start
+
+
+IMPORTANT! Given that this POC is using an open API, it requires to bypass CORS certificates. For this, you need to visit cors-anywhere.herokuapp.com and click 'Demo". After this, you will be able to see the data rendered graphically.
