@@ -1,165 +1,42 @@
 import React from "react";
 import styled from "styled-components";
 import { applyCardStyles } from "components/ReusableStyles";
-import { AreaChart, Area, Tooltip, ResponsiveContainer } from "recharts";
+import { AreaChart, Area, Tooltip, LineChart, Line, ResponsiveContainer, XAxis, YAxis, Legend, Brush } from "recharts";
+import {useState, useEffect} from "react";
+import moment from 'moment';
 
 
-function Streams() {
-  const data = [
-    {
-      data: 6780,
-    },
-    {
-      data: 6680,
-    },
-    {
-      data: 6500,
-    },
-    {
-      data: 6300,
-    },
-    {
-      data: 5900,
-    },
-    {
-      data: 5700,
-    },
-    {
-      data: 5500,
-    },
-    {
-      data: 5300,
-    },
-    {
-      data: 5100,
-    },
-    {
-      data: 5090,
-    },
-    {
-      data: 5300,
-    },
-    { data: 4500 },
-    {
-      data: 5000,
-    },
-    {
-      data: 4700,
-    },
-    {
-      data: 4400,
-    },
-    {
-      data: 4800,
-    },
-    {
-      data: 5300,
-    },
-    {
-      data: 5800,
-    },
-    {
-      data: 7000,
-    },
-    {
-      data: 7300,
-    },
-    {
-      data: 6580,
-    },
-    {
-      data: 6500,
-    },
-    {
-      data: 6300,
-    },
-    {
-      data: 6500,
-    },
-    {
-      data: 6700,
-    },
-    {
-      data: 7000,
-    },
-    {
-      data: 7300,
-    },
-    {
-      data: 7500,
-    },
-    {
-      data: 7700,
-    },
-    {
-      data: 8090,
-    },
-    {
-      data: 8190,
-    },
-    {
-      data: 7990,
-    },
-    {
-      data: 5800,
-    },
-    {
-      data: 6000,
-    },
-    {
-      data: 6300,
-    },
-    {
-      data: 6780,
-    },
+ function Streams() {
+  const orange = '#e67e22';
+  const red = '#e74c3c';
+  const color = '#27ae60';
+  const darkgrey = "#363636";
 
-    {
-      data: 7700,
-    },
-    {
-      data: 7500,
-    },
-    {
-      data: 7300,
-    },
-    {
-      data: 7000,
-    },
-    {
-      data: 6700,
-    },
-    {
-      data: 6500,
-    },
-    {
-      data: 6300,
-    },
-    {
-      data: 6500,
-    },
-    {
-      data: 6780,
-    },
-    {
-      data: 6300,
-    },
-    {
-      data: 6000,
-    },
-    {
-      data: 5800,
-    },
+     const CustomizedAxisTick = ({ x, y, payload }) => {
+      const dateTip = moment(payload.value)
+        .format("ll")
+        .slice(0, 6);
+         return (
+        <g transform={`translate(${x},${y})`}>
+       <text x={23} y={0} dy={14} fontSize="0.90em" fontFamily="bold" textAnchor="end" fill="#363636">
+         {dateTip}</text>
+        </g>
+       );
+      }
+  
+  let [data, setData] = useState([]);
 
-    {
-      data: 5490,
-    },
-    {
-      data: 6000,
-    },
-    {
-      data: 6100,
-    },
-  ];
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  const fetchData = () => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://unixftw.pythonanywhere.com/?datetime=recent`)
+      .then(response => response.json())
+      .then(json => setData(json))
+  }
+  console.log(data);
+
   const sliderData = [
     {
   
@@ -176,10 +53,12 @@ function Streams() {
       </div>
       <div className="chart">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart
-            //  width={500} height={400}
-            data={data}
-          >
+          <AreaChart width={500} height={400} data={data}
+                  margin={{ top: 15, right: 0, left: 0, bottom: 0 }} >
+            <XAxis dataKey="datetime" tick={CustomizedAxisTick} />
+            <YAxis />
+            <Tooltip />
+            <Legend />
             <defs>
               <linearGradient id="colorview" x1="0" y1="0" x2="0" y2="1">
                 <stop
@@ -190,10 +69,9 @@ function Streams() {
                 <stop offset="100%" stopColor="#000000ff" stopOpacity={0.2} />
               </linearGradient>
             </defs>
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="data"
+            
+            <Area type="monotone"
+              dataKey="voltage"
               stroke="var(--primary-color)"
               strokeWidth={2}
               fill="url(#colorview)"

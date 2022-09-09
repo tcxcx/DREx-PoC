@@ -8,12 +8,11 @@ import Map, {
 import mapboxgl from "mapbox-gl";
 
 function Solar() {
-  
-  
+
   return (
     <div className="solar">
     {console.log(process.env.REACT_APP_MAP_KEY)}
-      <Map
+      <Map className="container_S"
         mapboxAccessToken="pk.eyJ1IjoidGN4Y3giLCJhIjoiY2w3Z2toeGk0MDR3eDNvam52MWppdjc2dCJ9.b2wtY3B843IwNPRcyLxdBA"
         style={{
           width: "500px",
