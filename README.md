@@ -4,4 +4,8 @@ Install dependencies by:
 2. yarn run start
 
 
-IMPORTANT! Given that this POC is using an open API, it requires to bypass CORS certificates. For this, you need to visit cors-anywhere.herokuapp.com and click 'Demo". After this, you will be able to see the data rendered graphically.
+IMPORTANT! Given that this POC is using an open API, it requires to bypass CORS certificates. For this, you can install a CORS certificate browser extension https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino/related
+
+OR
+
+visit cors-anywhere.herokuapp.com and click 'Demo". After either of, you will be able to see the data rendered graphically.
