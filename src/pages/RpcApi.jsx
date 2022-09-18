@@ -62,7 +62,7 @@ function RpcApi() {
     const [generatedMnemonic, setGeneratedMnemonic] = useState('');
     const [accounts, setAccounts] = useState([]);
 
-    const antIcon = <LoadingOutlined style={{fontSize: 24}} spin/>;
+    const antIcon = <LoadingOutlined style={{color:'blue' , fontSize: 24}} spin/>;
     const keyring = new Keyring({type: 'sr25519', ss58Format: 2});
 
     const openNotification = (message, description) => {
@@ -143,7 +143,7 @@ function RpcApi() {
 
     const setup = async () => {
         try {
-            const wsProvider = new WsProvider('wss://rpc.polkadot.io');
+            const wsProvider = new WsProvider('wss://rpc.polkadot.io'); 
             const api = await ApiPromise.create({provider: wsProvider});
             const chain = await api.rpc.system.chain();
             setChain(`${chain}`);
@@ -210,7 +210,7 @@ function RpcApi() {
     </TabPane>;
 
     const walletExplorerPane = <TabPane tab="Wallet Explorer" key="2">
-        <Search placeholder="15huYREoovwL5XCmJ9QHr1xXk5rax2G7rNs7z4gPWWDhtiGD"
+        <Search placeholder="15opuYRETovwL5XCmJ9QHr1xXk5rax2G7rNs7z4gPWWDhtiGD"
                 enterButton="Search"
                 size="large"
                 disabled={searching}

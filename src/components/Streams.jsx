@@ -31,7 +31,7 @@ import moment from 'moment';
   }, [])
 
   const fetchData = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://unixftw.pythonanywhere.com/?datetime=recent`)
+    fetch(`http://drex-env.eba-jkxuyqbq.us-east-1.elasticbeanstalk.com/grid/list`)
       .then(response => response.json())
       .then(json => setData(json))
   }
@@ -71,7 +71,7 @@ import moment from 'moment';
             </defs>
             
             <Area type="monotone"
-              dataKey="voltage"
+              dataKey="energy"
               stroke="var(--primary-color)"
               strokeWidth={2}
               fill="url(#colorview)"
