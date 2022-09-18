@@ -5,9 +5,12 @@
   "homepage": ".",
   "proxy": "http://unixftw.pythonanywhere.com/?datetime=recent",
   "dependencies": {
+    "@polkadot/api": "^9.4.1",
+    "@polkadot/extension-dapp": "^0.44.6",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^4.23.2",
     "axios": "^0.27.2",
     "mapbox-gl": "^2.10.0",
     "moment": "^2.29.4",

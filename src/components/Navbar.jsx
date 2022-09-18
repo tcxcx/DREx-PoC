@@ -1,12 +1,37 @@
-import React from "react";
 import styled from "styled-components";
 import { BiChevronDown } from "react-icons/bi";
+import {web3Accounts, web3Enable} from "@polkadot/extension-dapp";
+import React, { useEffect, useState } from "react";
+
 function Navbar() {
+  const [accounts, setAccounts] = useState([]);
+  const [error, setError] = useState(null);
+
+    useEffect(() => {
+        extensionSetup()
+    }, []);
+
+    const extensionSetup = async () => {
+        const extensions = await web3Enable('Wallet-connect-tutorial');
+        if (extensions.length === 0) {
+            setError('No extension installed!');
+            return;
+        }
+        const accounts = await web3Accounts();
+        setAccounts(accounts);
+        console.log(accounts);
+    };
   return (
     <Nav>
       <h2>Overview</h2>
       <div className="timeline">
-        <span>Last 30 Days</span>
+        <span>Wallet</span>
+        {
+            error && <div>Error: {error}</div>
+          }
+          {
+            accounts.map(account => <div style={{ marginTop: 10}}>{account.address}</div>)
+          }
         <BiChevronDown />
       </div>
     </Nav>

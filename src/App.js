@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "components/Sidebar";
 import RightSidebar from "components/RightSidebar";
 import Dashboard from "pages/Dashboard";
 import Solar from "pages/Solar";
-
 import styled from "styled-components";
 import scrollreveal from "scrollreveal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Earningz from "pages/Earningz";
+import {web3Accounts, web3Enable} from "@polkadot/extension-dapp";
+import RpcApi from "pages/RpcApi";
+
+
+
 
 export default function App() {
-  
+
   useEffect(() => {
     const sr = scrollreveal({
       origin: "left",
@@ -39,12 +43,34 @@ export default function App() {
       {
         opacity: 0,
       }
+      
     );
   }, []);
+  const [accounts, setAccounts] = useState([]);
+  const [error, setError] = useState(null);
+
+    useEffect(() => {
+        extensionSetup()
+    }, []);
+
+    const extensionSetup = async () => {
+        const extensions = await web3Enable('Wallet-connect-tutorial');
+        if (extensions.length === 0) {
+            setError('No extension installed!');
+            return;
+        }
+        const accounts = await web3Accounts();
+        setAccounts(accounts);
+        console.log(accounts);
+    };
+
+
+
   return (
       <Div>
       <Router>
         <Sidebar />
+
             <Routes>
             {/*<Dashboard /> */}
 
@@ -53,6 +79,7 @@ export default function App() {
              {/*<Solar /> */}
             <Route path="/solar" element={<Solar/>} />
             <Route path="/earn" element={<Earningz/>} />
+            <Route path="/rpcapi" element={<RpcApi/>} />
             </Routes>
         <RightSidebar />
       </Router>

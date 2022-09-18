@@ -35,7 +35,7 @@ function Sidebar() {
         </li>
         <li>
           
-          <Link to=""><BiBell/></Link>
+          <Link to="rpcapi"><BiBell/></Link>
 
 
         </li>
