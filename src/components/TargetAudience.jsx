@@ -83,6 +83,7 @@ const Section = styled.section`
   }
   .chart {
     height: 13rem;
+    width: 23rem;
     .recharts-default-tooltip {
       background-color: var(--dark-background-color) !important;
       border: none !important;

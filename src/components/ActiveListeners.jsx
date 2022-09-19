@@ -52,7 +52,17 @@ export default function ActiveListeners() {
           );
         })}
       </div>
+      <div className="title">
+        </div>
+        <div className="filters">
+          
+          <div className="img">
+         
+        </div>
+        </div>
+        
     </Section>
+    
   );
 }
 
@@ -87,6 +97,10 @@ const Section = styled.section`
       width: 100%;
     }
   }
+  .img {
+    padding-left: 25px
+    padding-top:15px>
+  }
   .active {
     max-height: 11rem;
     overflow: auto;
@@ -102,6 +116,7 @@ const Section = styled.section`
         background-color: #b8b8b8;
       }
     }
+    
     h5 {
       font-weight: 100;
     }

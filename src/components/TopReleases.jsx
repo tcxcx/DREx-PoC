@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { applyCardStyles } from "components/ReusableStyles";
-
+import pic from "./drex_nft_mock.png";
 
 function TopReleases() {
   
@@ -15,9 +15,13 @@ function TopReleases() {
           <span></span>
           <span></span>
           <button>BUY</button>
+          
+
         </div>
       </div>
-      
+      <div className="img">
+      <img alt="nft_" src={pic}/>
+      </div>
     </Section>
   );
 }
@@ -47,35 +51,14 @@ const Section = styled.section`
       }
     }
   }
-  .musics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    .music {
-      border-bottom: 0.1rem solid #242424;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .details {
-        display: flex;
-        gap: 1rem;
-        .image {
-          img {
-            height: 2.5rem;
-          }
-        }
-        .info {
-          display: flex;
-          flex-direction: column;
-          gap: 0.3rem;
-          h6 {
-            font-weight: 100;
-          }
-        }
-      }
-    }
+  .img {
+    align-items: center;
+    justify-content: center;
+    padding-left: 300px
+
   }
+ 
+
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     .title-container {
       flex-direction: column;
@@ -85,10 +68,7 @@ const Section = styled.section`
         gap: 0.5rem;
       }
     }
-    .musics {
-      grid-template-columns: 1fr;
-    }
-  }
+    
 `;
 
 export default TopReleases;
