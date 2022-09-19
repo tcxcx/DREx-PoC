@@ -48,7 +48,7 @@ import { ImConnection } from "react-icons/im";
       <div className="title-container">
         <div className="title">
           <h4>Energy production </h4>
-          <h1>450,210⚡kWh</h1>
+          <h1 dataKey="current">450,210⚡Wh</h1>
         </div>
        
       </div>
@@ -72,7 +72,7 @@ import { ImConnection } from "react-icons/im";
             </defs>
             
             <Area type="monotone"
-              dataKey="energy"
+              dataKey="voltage"
               stroke="var(--primary-color)"
               strokeWidth={2}
               fill="url(#colorview)"

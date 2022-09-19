@@ -27,7 +27,6 @@ function Earningz() {
     <Section>
       <div className="grid">
           <Earnings />
-          <TopReleases />
       </div>
 
     </Section>
