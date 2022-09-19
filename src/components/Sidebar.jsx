@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import logo from '../assets/drexwhite.png';
 import { FaSolarPanel } from "react-icons/fa";
-import { BiGroup, BiBell } from "react-icons/bi";
+import { BiGroup } from "react-icons/bi";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { FiHelpCircle } from "react-icons/fi";
-
+import { ImConnection } from "react-icons/im";
+import { ImPacman } from "react-icons/im";
 
 function Sidebar() {
   
@@ -35,21 +36,21 @@ function Sidebar() {
         </li>
         <li>
           
-          <Link to="rpcapi"><BiBell/></Link>
+          <Link to="/rpcapi"> <ImConnection /></Link>
 
 
         </li>
         <li>
           
-          <Link to=""> <BiGroup /></Link>
+          <Link to="/pacman"> <ImPacman /></Link>
 
 
 
         </li>
       </ul>
       <div className="help">
-        <Link to=""><FiHelpCircle /> </Link>
-
+        <a href="https://linktr.ee/drexnetwork" target="_blank" rel="noreferrer"><FiHelpCircle />
+        </a>
 
       </div>
     </Aside>

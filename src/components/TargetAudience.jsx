@@ -31,7 +31,7 @@ function TargetAudience() {
     <Section>
       <div className="title-container">
         <div className="title">
-          <h4>CO<span>2</span> sequestered</h4>
+          <h4>I-RECs generated</h4>
           <BsThreeDots />
         </div>
       </div>

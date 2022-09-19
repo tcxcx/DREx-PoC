@@ -4,6 +4,7 @@ import { applyCardStyles } from "components/ReusableStyles";
 import { AreaChart, Area, Tooltip, LineChart, Line, ResponsiveContainer, XAxis, YAxis, Legend, Brush } from "recharts";
 import {useState, useEffect} from "react";
 import moment from 'moment';
+import { ImConnection } from "react-icons/im";
 
 
  function Streams() {
@@ -46,7 +47,7 @@ import moment from 'moment';
     <Section>
       <div className="title-container">
         <div className="title">
-          <h4>Energy production</h4>
+          <h4>Energy production </h4>
           <h1>450,210⚡kWh</h1>
         </div>
        

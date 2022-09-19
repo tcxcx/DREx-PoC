@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { applyCardStyles } from "components/ReusableStyles";
+import { Link } from "react-router-dom";
+
 
 function Earnings() {
   const earningsData = [
@@ -28,7 +30,7 @@ function Earnings() {
           <h4>Your Earnings</h4>
           <h1>$7,85</h1>
         </div>
-        <span className="more">Show More</span>
+        <Link to="/earn" className="more"> Show More</Link>
       </div>
       <div className="earnings">
         {earningsData.map(({ progress, amount }) => {

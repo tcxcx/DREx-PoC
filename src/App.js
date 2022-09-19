@@ -8,7 +8,8 @@ import scrollreveal from "scrollreveal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Earningz from "pages/Earningz";
 import {web3Accounts, web3Enable} from "@polkadot/extension-dapp";
-import RpcApi from "pages/RpcApi";
+import RpcApif from "pages/RpcApi_Slicer_2";
+import Pacman from "pages/Pacman";
 
 
 
@@ -79,7 +80,8 @@ export default function App() {
              {/*<Solar /> */}
             <Route path="/solar" element={<Solar/>} />
             <Route path="/earn" element={<Earningz/>} />
-            <Route path="/rpcapi" element={<RpcApi/>} />
+            <Route path="/rpcapi" element={<RpcApif/>} />
+            <Route path="/pacman" element={<Pacman/>} />
             </Routes>
         <RightSidebar />
       </Router>
