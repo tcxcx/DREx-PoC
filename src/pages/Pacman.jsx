@@ -12,17 +12,17 @@ function Pacman() {
 }
 
 const Section = styled.section`
-  height: 500px;
-  width: 500px;
-  padding-left: 500px;
-  padding-top: 200px;
+  height: 750px;
+  width: 750px;
+  padding-left: 300px;
+  padding-top: 150px;
 
   background-color: rgba(3, 3, 27, 0.7);
   
 
 .pacman {
   height: 750px;
-  width: 500px;
+  width: 75000px;
   
 }
 @media screen and (min-width: 280px) and (max-width: 1080px) {

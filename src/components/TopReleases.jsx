@@ -54,7 +54,7 @@ const Section = styled.section`
   .img {
     align-items: center;
     justify-content: center;
-    padding-left: 300px
+    padding-left: 100px
 
   }
  

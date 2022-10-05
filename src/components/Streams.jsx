@@ -72,7 +72,7 @@ import { ImConnection } from "react-icons/im";
             </defs>
             
             <Area type="monotone"
-              dataKey="voltage"
+              dataKey="energy"
               stroke="var(--primary-color)"
               strokeWidth={2}
               fill="url(#colorview)"
