@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BiChevronDown } from "react-icons/bi";
-import avatar from "assets/avatar.png";
+import avatar from "assets/avatar.svg";
 export default function Avatar() {
   return (
     <Section>
@@ -9,7 +9,7 @@ export default function Avatar() {
         <img src={avatar} alt="avatar" />
       </div>
       <div className="name">
-        <span>Web3athon Jury</span>
+        <span>Polkadot Latam Jury</span>
         <BiChevronDown />
       </div>
     </Section>

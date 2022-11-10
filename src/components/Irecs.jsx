@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { applyCardStyles } from "components/ReusableStyles";
 import { BsThreeDots } from "react-icons/bs";
 import { BarChart, Bar, Tooltip, ResponsiveContainer } from "recharts";
-function TargetAudience() {
+function IRECS() {
   const data = [
     {
       uv: 4000,
@@ -93,4 +93,4 @@ const Section = styled.section`
   }
 `;
 
-export default TargetAudience;
+export default IRECS;

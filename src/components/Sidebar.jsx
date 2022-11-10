@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from '../assets/drexwhite.png';
+import logo from '../assets/e-nft_logo.png';
 import { FaSolarPanel } from "react-icons/fa";
 import { BiGroup } from "react-icons/bi";
 import { AiOutlineDollarCircle } from "react-icons/ai";
@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <Aside id="sidebar">
       <div className="brand">
-      <img src={logo} width="100" height="50" alt="logo"/>
+      <img src={logo} alt="logo"/>
       </div>
       <ul className="links">
         <li className="selected">

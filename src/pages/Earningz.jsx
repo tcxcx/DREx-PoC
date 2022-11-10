@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Earnings from "components/Earnings";
 import TopReleases from "../components/TopReleases";
 import scrollreveal from "scrollreveal";
+import IRECS from "../components/Irecs"
+
 function Earningz() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -27,6 +29,8 @@ function Earningz() {
     <Section>
       <div className="grid">
           <Earnings />
+          <IRECS />
+          <TopReleases />
       </div>
 
     </Section>

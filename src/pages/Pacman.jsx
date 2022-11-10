@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import Sidebar from "components/Sidebar";
+import RightSidebar from "components/RightSidebar";
 function Pacman() {
   
   return (
     <Section>
-      
+      <Sidebar/>
         <iframe class="pacman" title="pacman_play" src="https://funhtml5games.com?embed=pacman" frameborder="0" scrolling="no"></iframe>
-            
+      <RightSidebar/>
     </Section>
   );
 }

@@ -8,10 +8,6 @@ import { ImConnection } from "react-icons/im";
 
 
  function Streams() {
-  const orange = '#e67e22';
-  const red = '#e74c3c';
-  const color = '#27ae60';
-  const darkgrey = "#363636";
 
      const CustomizedAxisTick = ({ x, y, payload }) => {
       const dateTip = moment(payload.value)
@@ -118,7 +114,7 @@ const Section = styled.section`
     }
   }
   .chart {
-    height: 10rem;
+    height: 15rem;
     .recharts-default-tooltip {
       background-color: var(--dark-background-color) !important;
       border: none !important;

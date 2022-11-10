@@ -20,7 +20,9 @@ function TopReleases() {
         </div>
       </div>
       <div className="img">
-      <img alt="nft_" src={pic}/>
+        <div className="contz">
+            <img alt="nft_" src={pic}/>
+        </div>
       </div>
     </Section>
   );
@@ -39,6 +41,7 @@ const Section = styled.section`
     .filters {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 3rem;
       color: var(--primary-color);
       button {
@@ -53,8 +56,15 @@ const Section = styled.section`
   }
   .img {
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  .contz {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-left: 100px
+    align-items: center;
+  }
 
   }
  

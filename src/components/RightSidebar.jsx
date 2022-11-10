@@ -6,7 +6,7 @@ function RightSidebar() {
   return (
     <Section id="rightSidebar">
       <Avatar />
-      <ActiveListeners />
+      <ActiveListeners />        
     </Section>
   );
 }
@@ -21,5 +21,7 @@ const Section = styled.section`
     padding: 0 2rem;
     padding-top: 2rem;
   }
+  
+    
 `;
 export default RightSidebar;
