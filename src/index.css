@@ -36,6 +36,14 @@ body {
   height: max-content;
   overflow-x: hidden;
 }
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
 
 ::-webkit-scrollbar {
 }
